@@ -1,14 +1,16 @@
 package usuarios;
 
+import membresias.Membresia;
+
 public class Cliente extends Usuario {
     private int puntosAcumulados;
     private int visitasTotales;
     private String historialJuegos;
-    private String membresia;
+    private Membresia membresia;
 
 
     public Cliente(String id, String name, String email, String passwordHash, String estado, int puntosAcumulados,
-            int visitasTotales, String historialJuegos, String membresia) {
+            int visitasTotales, String historialJuegos, Membresia membresia) {
         super(id, name, email, passwordHash, estado);
         this.puntosAcumulados = puntosAcumulados;
         this.visitasTotales = visitasTotales;
@@ -47,12 +49,12 @@ public class Cliente extends Usuario {
     }
 
 
-    public String getMembresia() {
+    public Membresia getMembresia() {
         return membresia;
     }
 
 
-    public void setMembresia(String membresia) {
+    public void setMembresia(Membresia membresia) {
         this.membresia = membresia;
     }
 
